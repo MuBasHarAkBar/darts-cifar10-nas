@@ -63,3 +63,56 @@ darts-cifar10-nas/
 │
 └── results/
     └── training_log.txt
+Files
+
+architect.py
+Contains the architecture optimization procedure used to update the architecture parameters.
+
+model_search.py
+Contains the DARTS search network, cells, and mixed operations used during the architecture search.
+
+operations.py
+Contains the candidate operations used in the architecture search space.
+
+genotypes.py
+Contains the operation definitions and genotype structure used to represent the searched architecture.
+
+train_search.py
+Main training script used to train the network and perform the architecture search.
+
+results/
+Contains experiment logs and other results.
+
+Running the Project
+
+The project can be run using Google Colab or another environment with a CUDA-enabled GPU.
+
+Install the required packages if they are not already available:
+
+pip install torch torchvision numpy
+
+Then run:
+
+python train_search.py
+
+For Google Colab, a GPU runtime is recommended because neural architecture search is computationally expensive.
+
+Acknowledgements
+
+This project is based on the original DARTS (Differentiable Architecture Search) work. The existing implementation was used as a starting point and was adapted and modified for this experiment and for running in a modern PyTorch and Google Colab environment.
+
+Original DARTS repository:
+
+https://github.com/quark0/darts
+
+Reference
+
+Liu, H., Simonyan, K., & Yang, Y. (2019).
+
+DARTS: Differentiable Architecture Search.
+
+International Conference on Learning Representations (ICLR).
+
+Note
+
+This repository is mainly for learning and research purposes. The current results show the progress of the architecture search up to Epoch 6. A complete 50-epoch search was not finished because of the available Google Colab runtime limitations.
