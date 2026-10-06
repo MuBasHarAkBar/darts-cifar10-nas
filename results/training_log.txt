@@ -1,0 +1,71 @@
+Experiment dir : search-EXP-20261005-131038
+GPU device = Tesla T4
+
+Search configuration:
+batch_size = 64
+learning_rate = 0.025
+learning_rate_min = 0.001
+momentum = 0.9
+weight_decay = 0.0003
+epochs = 50
+init_channels = 16
+layers = 8
+drop_path_prob = 0.3
+grad_clip = 5
+train_portion = 0.5
+arch_learning_rate = 0.0003
+arch_weight_decay = 0.001
+unrolled = False
+
+Model parameters: approximately 1.93M
+
+The DARTS search was started on CIFAR-10 using a first-order
+architecture optimization procedure.
+
+Training progress:
+
+Epoch 0
+Train accuracy: 40.840%
+Validation accuracy: 49.624%
+
+Epoch 1
+Train accuracy: 58.252%
+Validation accuracy: 61.684%
+
+Epoch 2
+Train accuracy: 65.164%
+Validation accuracy: 65.752%
+
+Epoch 3
+Train accuracy: 70.552%
+Validation accuracy: 71.076%
+
+Epoch 4
+Train accuracy: 74.048%
+Validation accuracy: 73.696%
+
+Epoch 5
+Train accuracy: 76.940%
+Validation accuracy: 75.392%
+
+Epoch 6
+Train accuracy: approximately 78.5%
+Validation accuracy: approximately 75%
+
+Last recorded training batch before the runtime stopped:
+
+10/05 02:25:05 PM train 000 4.521955e-01 81.250000 100.000000
+10/05 02:26:13 PM train 050 5.561836e-01 81.127451 99.080882
+
+The values in the last training line correspond to:
+
+Loss: 0.5561836
+Top-1 accuracy: 81.127%
+Top-5 accuracy: 99.081%
+
+The experiment was planned for 50 epochs. However, the Google Colab
+runtime/session ended before the experiment could be completed.
+
+The recorded results represent the actual progress of the DARTS
+search up to Epoch 6 and are not the final results of a completed
+50-epoch experiment.
